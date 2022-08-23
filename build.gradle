@@ -21,6 +21,7 @@ dependencies {
     compileOnly("org.graalvm.nativeimage:svm")
 
     implementation("io.micronaut:micronaut-validation")
+    implementation("io.micronaut:micronaut-management")
 
 }
 
@@ -43,5 +44,11 @@ micronaut {
     }
 }
 
-
-
+graalvmNative {
+    binaries {
+        main {
+            imageName.set('mn-graalvm-application')
+            buildArgs.add('--verbose')
+        }
+    }
+}

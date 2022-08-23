@@ -1,7 +1,14 @@
 micronaut:
+  server:
+    port: 8181
   application:
     name: httpclientDemo
 netty:
   default:
     allocator:
       max-order: 3
+github:
+  organization: micronaut-projects
+  repo: micronaut-core
+  username: 14paxton
+  token: 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
